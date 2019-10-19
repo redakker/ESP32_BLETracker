@@ -352,7 +352,7 @@ void setup()
   BLEDevice::init("");
   pBLEScan = BLEDevice::getScan();
   pBLEScan->setAdvertisedDeviceCallbacks(new MyAdvertisedDeviceCallbacks());
-  pBLEScan->setActiveScan(false);
+  pBLEScan->setActiveScan(true);
 
   mqttClient.setServer(MQTT_SERVER, MQTT_SERVER_PORT);
   #if PUBLISH_BATTERY_LEVEL
